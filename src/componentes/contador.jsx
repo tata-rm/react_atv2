@@ -9,8 +9,9 @@ function Contador() {
 
   return (
     <div className="App">
-      <p>Contador {contador}</p>
-      <button onClick={incrementar}>Incrementar</button>        
+      <p id='p'>Contador</p>
+      <p>{contador}</p>
+      <button onClick={incrementar} id="but">Incrementar</button>        
     </div>
   );
 }

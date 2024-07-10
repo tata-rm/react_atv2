@@ -1,23 +1,17 @@
 import React, {useState} from 'react';
 
 function Nome() {
-    const [contador, setContador] = useState(0);
-
-    const nome = 'nome'
+    const [nome, setNome] = useState(true);
 
     const trocarNome = () => {
-        setContador(contador + 1);
-        if (contador % 2 === 0) {
-            nome = 'terra';
-        } else {
-            nome = 'ar';
-        }
+        setNome(!nome);
     };
 
     return (
         <div className="App">
-            <p> {nome} </p>
-            <button onClick={trocarNome}> Trocar nome </button>      
+            <p id='p'>Nome</p>
+            {nome ? <p>Terra</p> : <p>Ar</p>}
+            <button onClick={trocarNome} id="but"> Trocar nome </button>
         </div>
     );
 }
